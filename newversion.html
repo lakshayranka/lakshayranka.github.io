@@ -19,8 +19,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
+      background: #0a8139;
+      border-bottom: 1px solid #0a8139;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -54,7 +54,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #333;
+      color: #fff;
       font-weight: 500;
     }
 
@@ -250,6 +250,58 @@
         flex-direction: column;
         align-items: flex-start;
       }
+      header {
+  background: #0a8139;
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  color: #e6f5eb;
+  max-width: 500px;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.hero-left .cta-button {
+  display: inline-block;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
     }
   </style>
 </head>
@@ -268,10 +320,18 @@
   </nav>
 
   <header>
-    <h1 data-aos="fade-up">SmartFeed by Moonbow</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Feed automation that helps retailers keep Google Shopping feeds clean, optimised, and profitable.</p>
-    <a href="#contact" class="cta-button" data-aos="zoom-in" data-aos-delay="400">Get in Touch</a>
-  </header>
+  <div class="hero-container">
+    <div class="hero-left" data-aos="fade-right">
+      <h1>Smartfeed by Moonbow</h1>
+      <p>Feed automation that helps retailers keep Google Shopping feeds clean, optimised, and profitable.</p>
+      <a href="#contact" class="cta-button">Book A Demo</a>
+    </div>
+    <div class="hero-right" data-aos="fade-left">
+      <img src="https://moonbow.co/images/smartfeed/feed-mockup.png" alt="SmartFeed Hero Image" />
+    </div>
+  </div>
+</header>
+
 
   <section class="problem-section" data-aos="fade-up">
     <h2>Tired of Feed Errors Costing You Revenue?</h2>
