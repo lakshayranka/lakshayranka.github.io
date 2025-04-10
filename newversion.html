@@ -251,42 +251,37 @@
         align-items: flex-start;
       }
       header {
-  background: #0a8139;
+  background: #2a672f;
   color: white;
   padding: 80px 20px;
 }
-
-.hero-container {
+  .hero-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
-  margin: auto;
-  gap: 40px;
+  margin: 0 auto;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
 .hero-left {
   flex: 1;
   min-width: 280px;
+  text-align: left;
 }
 
 .hero-left h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-  text-align: left;
+  color: #fff;
 }
 
 .hero-left p {
   font-size: 1.2rem;
-  color: #e6f5eb;
   max-width: 500px;
-  margin: 0 0 30px;
-  text-align: left;
-}
-
-.hero-left .cta-button {
-  display: inline-block;
+  margin-bottom: 30px;
+  color: #e6f5eb;
 }
 
 .hero-right {
@@ -302,14 +297,24 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.cta-button {
+  padding: 12px 24px;
+  background: white;
+  color: #2a672f;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="logo">
-      <img src="sf@2x.png" alt="SmartFeed Logo" />
-      SmartFeed
+      <img src="sf@2x.png" alt="Smartfeed Logo" />
+      Smartfeed
     </div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul id="menu">
@@ -321,22 +326,16 @@
 
   <header>
   <div class="hero-container">
-    <div class="hero-left" data-aos="fade-right">
+    <div class="hero-left">
       <h1>Smartfeed by Moonbow</h1>
       <p>Feed automation that helps retailers keep Google Shopping feeds clean, optimised, and profitable.</p>
       <a href="#contact" class="cta-button">Book A Demo</a>
     </div>
-    <div class="hero-right" data-aos="fade-left">
+    <div class="hero-right">
       <img src="https://moonbow.co/images/smartfeed/feed-mockup.png" alt="SmartFeed Hero Image" />
     </div>
   </div>
 </header>
-
-
-  <section class="problem-section" data-aos="fade-up">
-    <h2>Tired of Feed Errors Costing You Revenue?</h2>
-    <p>Most retailers struggle with rejected products, messy titles, and unoptimised feeds. SmartFeed fixes all that — automatically.</p>
-  </section>
 
   <section class="trusted-section" id="clients" data-aos="fade-up">
     <div class="container">
@@ -351,6 +350,11 @@
         <img src="https://moonbow.co/images/smartfeed/swarovski-white.png" alt="Swarovski" />
       </div>
     </div>
+  </section>
+
+   <section class="problem-section" data-aos="fade-up">
+    <h2>Tired of Feed Errors Costing You Revenue?</h2>
+    <p>Most retailers struggle with rejected products, messy titles, and unoptimised feeds. SmartFeed fixes all that — automatically.</p>
   </section>
 
   <section class="features" id="features" data-aos="fade-up">
