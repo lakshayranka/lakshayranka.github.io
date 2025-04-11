@@ -1,12 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smartfeed - Best Feed Management Tool For Ecommerce</title>
-  <link rel="icon" type="image/png" href="sf@2x.png" />
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartfeed – AI-Powered Feed Automation for Retailers</title>
+  <link rel="icon" type="image/png" href="sf@2x.png">
   <style>
     body {
       margin: 0;
@@ -21,7 +18,6 @@
       align-items: center;
       padding: 20px 40px;
       background: #0a8139;
-      border-bottom: 1px solid #0a8139;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -33,16 +29,11 @@
       font-weight: bold;
       font-size: 1.2rem;
       gap: 10px;
+      color: white;
     }
 
     nav .logo img {
       height: 30px;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
     }
 
     nav ul {
@@ -59,22 +50,18 @@
       font-weight: 500;
     }
 
-    nav ul li a:hover {
-      color: #00c06f;
-    }
-
     header {
-      background: #2a672f;
+      background: #0a8139;
       color: white;
-      padding: 80px 20px;
+      padding: 60px 20px 40px;
     }
 
     .hero-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      max-width: 1500px;
-      margin: 0 auto;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
       gap: 60px;
       flex-wrap: wrap;
     }
@@ -82,90 +69,50 @@
     .hero-left {
       flex: 1;
       min-width: 280px;
-      text-align: left;
     }
 
     .hero-left h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #fff;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-align: left;
     }
 
     .hero-left p {
       font-size: 1.2rem;
-      max-width: 500px;
-      margin-bottom: 30px;
       color: #e6f5eb;
-    }
-
-    .hero-left .cta-button {
-      display: inline-block;
+      margin-bottom: 30px;
+      text-align: left;
     }
 
     .hero-right {
       flex: 1;
       min-width: 280px;
-      text-align: right;
+      text-align: center;
     }
 
     .hero-right img {
       max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
     }
 
     .cta-button {
-      padding: 12px 24px;
+      padding: 14px 28px;
+      font-size: 1rem;
       background: white;
       color: #2a672f;
       border-radius: 6px;
       font-weight: bold;
       text-decoration: none;
       display: inline-block;
-    }
-
-    .cta-button:hover {
-      background: #e3ffe3;
+      border: none;
     }
 
     section {
       padding: 60px 20px;
-      width: 100%;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .trusted-section {
-      background-color: #2a672f;
-      color: white;
-    }
-
-    .trusted-section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .clients-logos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      padding: 20px 0;
-    }
-
-    .clients-logos img {
-      max-height: 40px;
-      max-width: 120px;
-      object-fit: contain;
-      filter: brightness(0) invert(1);
     }
 
     .features {
+      background: #f7fdf7;
       text-align: center;
     }
 
@@ -178,118 +125,114 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
+      margin-top: 40px;
     }
 
     .feature-box {
+      background: #fff;
+      border-radius: 8px;
       padding: 20px;
-      background: #f9fafb;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
     }
 
-    .how-it-works {
+    .feature-box h3 {
+      color: #2a672f;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      background: #ecf9ee;
       text-align: center;
     }
 
-    .step {
-      background: #f6f9ff;
-      padding: 20px;
-      border-left: 5px solid #0070f3;
-      border-radius: 6px;
+    .stats h2 {
+      margin-bottom: 30px;
+    }
+
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .stat {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0a8139;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .trusted-section {
+      background: #2a672f;
+      color: white;
+      text-align: center;
+    }
+
+    .clients-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .clients-logos img {
+      max-height: 30px;
+      filter: brightness(0) invert(1);
+    }
+
+    .testimonial {
+      background: #f0f5ff;
+      text-align: center;
+    }
+
+    .testimonial h2 {
       margin-bottom: 20px;
-      text-align: left;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .visual-section {
-      text-align: center;
-    }
-
-    .visual-section img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .testimonials {
-      background: #f4f8fc;
-      text-align: center;
     }
 
     .quote {
       font-style: italic;
-      color: #333;
       max-width: 700px;
       margin: 10px auto;
+      color: #333;
     }
 
     .cta-section {
-      background: #f0f4ff;
+      background: #f3fbf5;
       text-align: center;
     }
 
     footer {
       text-align: center;
-      padding: 30px 10px;
       font-size: 0.9rem;
       color: #888;
+      padding: 30px 20px;
     }
 
-    @media(max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: white;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px;
-        border-top: 1px solid #eee;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav ul li {
-        margin-bottom: 10px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
+    @media (max-width: 768px) {
       .hero-container {
         flex-direction: column;
         text-align: center;
       }
-
       .hero-left {
         text-align: center;
       }
     }
   </style>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body>
   <nav>
-    <div class="logo">
-      <img src="logo-smartFeed.png" alt="SmartFeed Logo" />
-      SmartFeed
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul id="menu">
+    <div class="logo"><img src="sf@2x.png" alt="Logo"> Smartfeed</div>
+    <ul>
       <li><a href="#features">Features</a></li>
-      <li><a href="#clients">Clients</a></li>
+      <li><a href="#stats">Impact</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -297,90 +240,104 @@
   <header>
     <div class="hero-container">
       <div class="hero-left">
-        <h1>Smartfeed by Moonbow</h1>
-        <p>Feed automation that helps retailers keep Google Shopping feeds clean, optimised, and profitable.</p>
-        <a href="#contact" class="cta-button">Book A Demo</a>
+        <h1>Fix Your Feed. Boost Visibility. Own Google Shopping.</h1>
+        <p>SmartFeed auto-fixes errors, updates titles, and monitors feed health in real-time — powered by AI and verified by humans.</p>
+        <a href="#contact" class="cta-button">Fix My Feed Now</a>
       </div>
-      <div class="hero-right">
-        <img src="https://moonbow.co/images/smartfeed/feed-mockup.png" alt="SmartFeed Hero Image" />
+      <div class="hero-right" data-aos="fade-up">
+        <img src="https://moonbow.co/images/smartfeed/shop-img1.png" alt="SmartFeed Demo">
       </div>
     </div>
   </header>
-
-  <section class="trusted-section" id="clients">
-    <div class="container">
-      <h2>Trusted by Leading Retailers</h2>
-      <div class="clients-logos">
-        <img src="https://moonbow.co/images/smartfeed/lacoste-white.png" alt="Lacoste" />
-        <img src="https://moonbow.co/images/smartfeed/smyths-white.png" alt="Smyths Toys" />
-        <img src="https://moonbow.co/images/smartfeed/groupm-white.png" alt="GroupM" />
-        <img src="https://moonbow.co/images/price-checker/akzonobel-logo.png" alt="Akzonobel" />
-        <img src="https://moonbow.co/images/smartfeed/havas-white.png" alt="Havas" />
-        <img src="https://moonbow.co/images/smartfeed/dulux-white.png" alt="Dulux" />
-        <img src="https://moonbow.co/images/smartfeed/swarovski-white.png" alt="Swarovski" />
-      </div>
+<section class="trusted-section" data-aos="fade-up">
+    <h2>Trusted by Leading Retailers</h2>
+    <div class="clients-logos">
+      <img src="https://moonbow.co/images/smartfeed/lacoste-white.png" alt="Lacoste">
+      <img src="https://moonbow.co/images/smartfeed/smyths-white.png" alt="Smyths">
+      <img src="https://moonbow.co/images/smartfeed/groupm-white.png" alt="GroupM">
+      <img src="https://moonbow.co/images/smartfeed/havas-white.png" alt="Havas">
+      <img src="https://moonbow.co/images/smartfeed/dulux-white.png" alt="Dulux">
+      <img src="https://moonbow.co/images/smartfeed/swarovski-white.png" alt="Swarovski">
     </div>
   </section>
 
-  <section class="features" id="features">
-    <h2>Why SmartFeed?</h2>
+  <section class="features" data-aos="fade-up" id="features">
+    <h2>Why Retailers Choose SmartFeed</h2>
     <div class="features-grid">
       <div class="feature-box">
-        <h3>Auto-Cleanup</h3>
-        <p>Fixes product titles, descriptions, and missing fields automatically.</p>
+        <h3>🤖 AI Classification</h3>
+        <p>Automatically assigns your products to the most relevant categories, improving visibility and ad performance.</p>
       </div>
       <div class="feature-box">
-        <h3>Feed Health Monitoring</h3>
-        <p>Know exactly when your feed is at risk with live issue tracking.</p>
+        <h3>⚠️ Live Feed Alerts</h3>
+        <p>Instant notifications when something breaks, so you're never in the dark with rejected products or broken SKUs.</p>
       </div>
       <div class="feature-box">
-        <h3>Real Results</h3>
-        <p>Improved ad visibility, lower CPCs, and better ROAS with clean data.</p>
+        <h3>🌐 Multi-Channel Ready</h3>
+        <p>Optimised for Google, Meta, and other Shopping networks with real-time syncing and clean data feeds.</p>
       </div>
     </div>
-  </section>
+  <div class="features-grid">
+      <div class="feature-box">
+        <h3>🚫 Rejections Fixed</h3>
+        <p>Fix policy issues, formatting errors, and missing fields automatically.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🛠️ Feed Optimisation Engine</h3>
+        <p>We rewrite and clean your product data, boosting relevance and quality scores across your listings.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📈 Better Visibility</h3>
+        <p>More approvals = better Shopping ad rank and cheaper CPCs.</p>
+      </div>
+    </div></section>
 
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <div class="step">
-      <h3>1. Connect your feed</h3>
-      <p>Sync your product feed with SmartFeed in a few clicks.</p>
+  <section class="stats" data-aos="zoom-in-up" id="stats">
+    <h2>Smartfeed in Numbers</h2>
+    <div class="stats-container">
+      <div>
+        <div class="stat">42.7M+</div>
+        <div class="stat-label">Product &amp; price updates daily</div>
+      </div>
+      <div>
+        <div class="stat">£475M</div>
+        <div class="stat-label">Saved on out-of-stock products</div>
+      </div>
+      <div>
+        <div class="stat">+67%</div>
+        <div class="stat-label">Extra reach for Shopping campaigns</div>
+      </div>
     </div>
-    <div class="step">
-      <h3>2. Smart cleanup starts</h3>
-      <p>Our engine auto-fixes errors, missing fields, and bad formatting.</p>
-    </div>
-    <div class="step">
-      <h3>3. Get more conversions</h3>
-      <p>Enjoy improved visibility and better shopping performance instantly.</p>
-    </div>
-  </section>
+  <div class="stats-container" style="margin-top: 40px;">
+       <div>
+        <div class="stat">90% ↓</div>
+        <div class="stat-label">Feed Rejections</div>
+      </div>
+      <div>
+        <div class="stat">+47%</div>
+        <div class="stat-label">Shopping Performance</div>
+      </div>
+      <div>
+        <div class="stat">100%</div>
+        <div class="stat-label">Feed Readiness Score</div>
+      </div>
+    </div></section>
 
-  <section class="visual-section">
-    <h2>A Look Inside SmartFeed</h2>
-    <img src="https://moonbow.co/images/smartfeed/feed-mockup.png" alt="SmartFeed Visual">
-  </section>
-
-  <section class="testimonials">
+  <section class="testimonial" data-aos="fade-in">
     <h2>What Our Clients Say</h2>
-    <div class="quote">"SmartFeed cut our feed rejections by 90% in 2 weeks!" – Retail Ops Lead, GroupM</div>
-    <div class="quote">"We recovered thousands in lost ad impressions thanks to this." – eComm Manager, AkzoNobel</div>
+    <div class="quote">"Smartfeed allows us to easily create, distribute, and manage our product catalogue across Google and Facebook. Changes are reflected in real-time, giving us a huge advantage versus our competitors."</div>
   </section>
 
-  <section class="cta-section" id="contact">
-    <h2>Let’s Talk</h2>
-    <p>Want to see SmartFeed in action or ask something specific? Drop us a line.</p>
-    <a href="mailto:hello@moonbow.co" class="cta-button">Email Us</a>
+  <section class="cta-section" data-aos="fade-up" id="contact">
+    <h2>Ready to Fix Your Feed?</h2>
+    <p>Let us show you how SmartFeed can clean and optimise your feed — and grow your visibility.</p>
+    <a href="mailto:hello@moonbow.co" class="cta-button">Book A Demo</a>
   </section>
 
   <footer>
-    © 2025 Moonbow Media Private Limited. All rights reserved.
+    © 2025 <a href="https://moonbow.co">Moonbow</a>. All rights reserved.
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('show');
-    }
-  </script>
-</body>
-</html>
+
+<script>AOS.init({ once: true });</script>
+</body></html>
