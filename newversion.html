@@ -1,471 +1,441 @@
-
-
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Smartfeed – AI-Powered Feed Automation for Retailers</title>
-<link href="sf@2x.png" rel="icon" type="image/png"/>
-<style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff;
-      color: #222;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: #0a8139;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav .logo {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      font-size: 1.2rem;
-      gap: 10px;
-      color: white;
-    }
-
-    nav .logo img {
-      height: 30px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-    }
-
-    header {
-      background: #0a8139;
-      color: white;
-      padding: 60px 20px 40px;
-    }
-
-    .hero-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1500px;
-      margin: auto;
-      gap: 100px;
-      flex-wrap: wrap;
-    }
-
-    .hero-left {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .hero-left h1 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      text-align: left;
-    }
-
-    .hero-left p {
-      font-size: 1.2rem;
-      color: #e6f5eb;
-      margin-bottom: 30px;
-      text-align: left;
-    }
-
-    .hero-right {
-      flex: 1;
-      min-width: 280px;
-      text-align: center;
-    }
-
-    .hero-right img {
-      max-width: 80%;
-      border-radius: 10px;
-    }
-
-    .cta-button {
-      padding: 14px 28px;
-      font-size: 1rem;
-      background: white;
-      color: #2a672f;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      border: none;
-    }
-
-    section {
-      padding: 60px 20px;
-    }
-
-    .features {
-      background: #f7fdf7;
-      text-align: center;
-    }
-
-    .features h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .feature-box {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    }
-
-    .feature-box h3 {
-      color: #2a672f;
-      margin-bottom: 10px;
-    }
-
-    .stats {
-      background: #ecf9ee;
-      text-align: center;
-    }
-
-    .stats h2 {
-      margin-bottom: 30px;
-    }
-
-    .stats-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .stat {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #0a8139;
-    }
-
-    .stat-label {
-      font-size: 1rem;
-      color: #333;
-    }
-
-    .trusted-section {
-      background: #2a672f;
-      color: white;
-      text-align: center;
-    }
-
-    .clients-logos {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-top: 30px;
-    }
-
-    .clients-logos img {
-      max-height: 30px;
-      filter: brightness(0) invert(1);
-    }
-
-    .testimonial {
-      background: #f0f5ff;
-      text-align: center;
-    }
-
-    .testimonial h2 {
-      margin-bottom: 20px;
-    }
-
-    .quote {
-      font-style: italic;
-      max-width: 700px;
-      margin: 10px auto;
-      color: #333;
-    }
-
-    .cta-section {
-      background: #0a8139;
-      text-align: center;
-color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      padding: 30px 20px;
-    }
-a {
-color: #888;
-text-decoration: none;
-}
-
-    @media (max-width: 768px) {
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-left {
-        text-align: center;
-      }
-    }
-  
-@media (max-width: 768px) {
-  .hero-left img[alt="Google Partner Badge"] {
-    height: 50px !important;
-    margin-top: 20px;
-  }
-}
-</style>
-<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-</head>
-<body>
-<nav>
-<div class="logo"><img alt="Logo" src="sf@2x.png"/> Smartfeed</div>
-<ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#stats">Impact</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-<header>
-<div class="hero-container">
-<div class="hero-left" style="margin-bottom: 40px;">
-<div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; margin-bottom: 30px; display: inline-block; font-size: 1rem; color: #e0f5ea;">
-  Frustrated with disapprovals or vague Shopping feeds? Smartfeed brings control and clarity.
-</div>
-<h1>Fix Your Feed. Elevate Your Shopping Performance.</h1>
-<p>Smartfeed is the AI-powered tool to clean up disapprovals, keep your data accurate, and scale Shopping campaigns — no guesswork, no delays.</p>
-<a class="cta-button" href="#contact">Book a Demo</a>
-<div style="margin-top: 20px;">
-<a href="https://www.google.com/partners/agency?id=5536550841" target="_blank">
-<img alt="Google Partner Badge" src="https://www.gstatic.com/partners/badge/images/2024/PartnerBadgeClickable.svg" style="height: 70px;"/>
-</a>
-</div>
-</div>
-<div class="hero-right">
-<img alt="Smartfeed Demo" src="https://moonbow.co/images/smartfeed/shop-img1.png" style="margin-bottom: 40px;"/>
-</div>
-</div>
-</header>
-<section class="trusted-section" data-aos="fade-up">
-<h2>Trusted by Leading Retailers</h2>
-<div class="clients-logos">
-<img alt="Lacoste" src="https://moonbow.co/images/smartfeed/lacoste-white.png"/>
-<img alt="Smyths" src="https://moonbow.co/images/smartfeed/smyths-white.png"/>
-<img alt="GroupM" src="https://moonbow.co/images/smartfeed/groupm-white.png"/>
-<img alt="Havas" src="https://moonbow.co/images/smartfeed/havas-white.png"/>
-<img alt="Dulux" src="https://moonbow.co/images/smartfeed/dulux-white.png"/>
-<img alt="Swarovski" src="https://moonbow.co/images/smartfeed/swarovski-white.png"/>
-</div>
-</section>
-<section class="features" data-aos="fade-up" id="features">
-<h2>Why Retailers Choose Smartfeed</h2>
-<div class="features-grid">
-<div class="feature-box">
-<h3>🤖 AI Classification</h3>
-<p>Automatically assigns your products to the most relevant categories, improving visibility and ad performance.</p>
-</div>
-<div class="feature-box">
-<h3>🛠 Feed Optimisation Engine</h3>
-<p>Smartfeed rewrites and restructures feed attributes using AI to match Google Shopping best practices and improve performance.</p>
-</div>
-<div class="feature-box">
-<h3>🌐 Multi-Channel Ready</h3>
-<p>Optimised for Google, Meta, and other Shopping networks with real-time syncing and clean data feeds.</p>
-</div>
-</div>
-<div class="features-grid">
-<div class="feature-box">
-<h3>🚫 Rejections Fixed</h3>
-<p>Fix policy issues, formatting errors, and missing fields automatically.</p>
-</div>
-<div class="feature-box">
-<h3>⚠️ Live Feed Alerts</h3>
-<p>Instant notifications when something breaks, so you're never in the dark with rejected products or broken SKUs.</p>
-</div>
-<div class="feature-box">
-<h3>📈 Better Visibility</h3>
-<p>More approvals = better Shopping ad rank and cheaper CPCs.</p>
-</div>
-</div></section>
-<section class="before-after-title" style="background: #f7f9fa; padding: 60px 20px; text-align: center;">
-<h2>Here’s What Smartfeed Fixes</h2>
-<p>We turn incomplete or vague titles into fully optimised product listings that perform better in Shopping ads.</p>
-<div style="display: flex; justify-content: center; align-items: center; gap: 100px; margin-top: 40px; flex-wrap: wrap;">
-<div style="width: 500px; padding: 20px 30px; background: #f1f1f1; border-radius: 10px;">
-<h3 style="color: #444;">Before</h3>
-<p style="font-family: monospace;">"cotton shirt for men"</p>
-</div>
-<span style="font-size: 2rem; font-weight: bold; color: #0a8139;">➔</span>
-<img alt="Smartfeed Logo" src="sf@2x.png" style="height: 40px; vertical-align: middle;"/>
-<span style="font-size: 2rem; font-weight: bold; color: #0a8139;">➔</span>
-<div style="width: 500px; padding: 20px 30px; background: #e6fff0; border-radius: 10px;">
-<h3 style="color: #0a8139;">After</h3>
-<p style="font-family: monospace;">"Men’s Blue Cotton Shirt – Medium, Tailored Fit (BrandName)"</p>
-</div>
-</div>
-<div style="text-align: center; margin-top: 30px;">
-<a href="#features" style="background: #0a8139; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 500;">Explore Smartfeed Features</a>
-</div>
-</section>
-<section class="stats data-aos=" id="stats" zoom-in-up"="">
-<h2>Smartfeed in Numbers</h2>
-<div class="stats-container">
-<div>
-<div class="stat">42.7M+</div>
-<div class="stat-label">Product &amp; price updates daily</div>
-</div>
-<div>
-<div class="stat">£475M</div>
-<div class="stat-label">Saved on out-of-stock products</div>
-</div>
-<div>
-<div class="stat">+67%</div>
-<div class="stat-label">Extra reach for Shopping campaigns</div>
-</div>
-</div>
-<div class="stats-container" style="margin-top: 40px;">
-<div>
-<div class="stat">90% ↓</div>
-<div class="stat-label">Feed Rejections</div>
-</div>
-<div>
-<div class="stat">+47%</div>
-<div class="stat-label">Shopping Performance</div>
-</div>
-<div>
-<div class="stat">100%</div>
-<div class="stat-label">Feed Readiness Score</div>
-</div>
-</div></section>
-<section class="marketing-channels" style="background: #f9f9f9; padding: 60px 20px; text-align: center;">
-<h2>Smartfeed Powers All Your Marketing Channels</h2>
-<p>Distribute clean, optimised product data across every platform that matters.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-<img alt="Google Shopping" src="https://moonbow.co/images/smartfeed/google-logo.png" style="height:40px;" title="Google Shopping"/>
-<img alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" style="height:40px;" title="Facebook"/>
-<img alt="AWIN" src="https://moonbow.co/images/smartfeed/awin-logo.png" style="height:40px;" title="AWIN"/>
-<img alt="Snapchat" src="https://moonbow.co/images/smartfeed/Snapchat.png" style="height:40px;" title="Snapchat"/>
-<img alt="Pinterest" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" style="height:40px;" title="Pinterest"/>
-<img alt="Bing" src="https://www.bing.com/rp/QO12R6eZz9WMzJPOio-qN8bXJZ4.png" style="height:40px;" title="Bing"/>
-<img alt="TikTok" src="https://icon2.cleanpng.com/20200922/xqh/transparent-social-media-1713858561643.webp" style="height:40px;" title="TikTok"/>
-<img alt="Idealo" src="https://smart-feed.ai/assets/images/channels/Idealo.svg" style="height:40px;" title="Idealo"/>
-</div>
-</section>
-<section class="data-sources" style="padding: 60px 20px; text-align: center;">
-<h2>Plug into Any Source. No IT Drama.</h2>
-<p>Whether you’re using a store platform or a spreadsheet — Smartfeed can connect and clean.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-<img alt="Magento" src="https://icon2.cleanpng.com/20180909/ojo/kisspng-magento-logo-aftership-e-commerce-varnish-outclicks-commercial-analysis-of-up-vision-5b9568897b1549.4588647015365182815042.jpg" style="height:40px;" title="Magento"/>
-<img alt="Shopify" src="https://icon2.cleanpng.com/20180516/vaw/avr95u89g.webp" style="height:40px;" title="Shopify"/>
-<img alt="Google Sheets" src="https://icon2.cleanpng.com/lnd/20241121/rv/6b2d983549626954fe5d18708a48fe.webp" style="height:40px;" title="Google Sheets"/>
-<img alt="XML" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xml.svg" style="height:40px;" title="XML"/>
-<img alt="BigCommerce" src="https://moonbow.co/images/smartfeed/bigcommerce.png" style="height:40px;" title="BigCommerce"/>
-<img alt="WooCommerce" src="https://moonbow.co/images/smartfeed/woocommerce.png" style="height:40px;" title="WooCommerce"/>
-<img alt="PrestaShop" src="https://cdn.freebiesupply.com/logos/large/2x/prestashop-logo-png-transparent.png" style="height:40px;" title="PrestaShop"/>
-</div>
-</section>
-<section class="how-it-works" style="padding: 60px 20px; background: #f0f4ff; text-align: center;">
-<h2>How It Works</h2>
-<p style="max-width: 700px; margin: 0 auto 20px;">Smartfeed simplifies complex feed management in 3 simple steps.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-<div style="flex: 1; min-width: 240px; max-width: 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-<h3>1. Connect Your Feed</h3>
-<p>Plug in from any source – Shopify, Magento, XML, or Google Sheets.</p>
-</div>
-<div style="flex: 1; min-width: 240px; max-width: 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-<h3>2. Let Smartfeed Optimise</h3>
-<p>We automatically clean, enhance, and flag issues in real time.</p>
-</div>
-<div style="flex: 1; min-width: 240px; max-width: 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-<h3>3. Go Live with Confidence</h3>
-<p>Your Shopping campaigns run faster, better, and more accurately.</p>
-</div>
-</div>
-</section>
-<section class="testimonial-cards" style="padding: 60px 20px; background: #f4f8fc; text-align: center;">
-<h2>What Our Clients Say</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-<div style="background: white; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-<p style="font-style: italic;">“Smartfeed cleaned up our product feed in days. No more errors.”</p>
-<p style="font-weight: bold;">★★★★★</p>
-<p style="font-size: 0.9rem; color: #666;">eCommerce Manager, GroupM</p>
-</div>
-<div style="background: white; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-<p style="font-style: italic;">“We saw our feed disapprovals drop by 90% within the first 2 weeks.”</p>
-<p style="font-weight: bold;">★★★★★</p>
-<p style="font-size: 0.9rem; color: #666;">Digital Lead, AkzoNobel</p>
-</div>
-<div style="background: white; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-<p style="font-style: italic;">“We saw our feed disapprovals drop by 90% within the first 2 weeks.”</p>
-<p style="font-weight: bold;">★★★★★</p>
-<p style="font-size: 0.9rem; color: #666;">Digital Lead, AkzoNobel</p>
-</div>
-</div>
-</section>
-<section class="case-studies" style="background: #f9f9f9; padding: 60px 20px; text-align: center;">
-<h2>Real Results from Retailers Like You</h2>
-<p>Here’s how Smartfeed helped businesses improve Shopping campaign performance and cut down errors — fast.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto;">
-<div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-<h3><img alt="Childsplay Clothing" src="https://consumersiteimages.trustpilot.net/business-units/4e1e7e6300006400051032e0-198x149-1x.avif"/></h3>
-<p><strong>Challenge:</strong> Frequent feed rejections and disapprovals<br/>
-<strong>Solution:</strong> Smartfeed's cleanup engine and policy mapping<br/>
-<strong>Impact:</strong> 90% fewer disapproved products in 14 days</p>
-</div>
-<div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-<h3><img alt="Cocoon Sleeping" src="https://s3-eu-west-1.amazonaws.com/tpd/logos/5d12315190807c00012d01d8/0x0.png" style="width: 169px;"/></h3>
-<p><strong>Challenge:</strong> Poor CTR and low ROAS on Shopping Ads<br/>
-<strong>Solution:</strong> Feed re-scoring + dynamic title rewrite<br/>
-<strong>Impact:</strong> 47% increase in conversion rate within a month</p>
-</div>
-</div>
-</section>
-<section class="cta-section" data-aos="fade-up" id="contact">
-<h2>Ready to Fix Your Feed?</h2>
-<p>Book a demo and see what’s costing you revenue. Get a tailored walkthrough of how Smartfeed can help your business.</p>
-<a class="cta-button" href="mailto:hello@moonbow.co">Book a Demo</a>
-</section>
-<footer>
-    © 2025 <a href="https://moonbow.co">Moonbow</a>. All rights reserved.
-  </footer>
-<script>AOS.init({ once: true });</script>
-<style>
-  .sticky-cta {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #0a8139;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 999;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-</style>
-<a class="sticky-cta" href="#contact">Let’s Fix Your Feed</a>
-</body></html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>Smartfeed – AI-Powered Feed Automation for Retailers</title>
+      <link href="sf@2x.png" rel="icon" type="image/png"/>
+      <style>
+         body {
+         margin: 0;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         background: #fff;
+         color: #222;
+         }
+         nav {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px 40px;
+         background: #0a8139;
+         position: sticky;
+         top: 0;
+         z-index: 1000;
+         }
+         nav .logo {
+         display: flex;
+         align-items: center;
+         font-weight: bold;
+         font-size: 1.2rem;
+         gap: 10px;
+         color: white;
+         }
+         nav .logo img {
+         height: 30px;
+         }
+         nav ul {
+         list-style: none;
+         display: flex;
+         gap: 30px;
+         margin: 0;
+         padding: 0;
+         }
+         nav ul li a {
+         text-decoration: none;
+         color: #fff;
+         font-weight: 500;
+         }
+         header {
+         background: #0a8139;
+         color: white;
+         padding: 60px 20px 40px;
+         }
+         .hero-container {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         max-width: 1500px;
+         margin: auto;
+         gap: 100px;
+         flex-wrap: wrap;
+         }
+         .hero-left {
+         flex: 1;
+         min-width: 280px;
+         }
+         .hero-left h1 {
+         font-size: 2.8rem;
+         margin-bottom: 20px;
+         text-align: left;
+         }
+         .hero-left p {
+         font-size: 1.2rem;
+         color: #e6f5eb;
+         margin-bottom: 30px;
+         text-align: left;
+         }
+         .hero-right {
+         flex: 1;
+         min-width: 280px;
+         text-align: center;
+         }
+         .hero-right img {
+         max-width: 80%;
+         border-radius: 10px;
+         }
+         .cta-button {
+         padding: 14px 28px;
+         font-size: 1rem;
+         background: white;
+         color: #2a672f;
+         border-radius: 6px;
+         font-weight: bold;
+         text-decoration: none;
+         display: inline-block;
+         border: none;
+         }
+         section {
+         padding: 60px 20px;
+         }
+         .features {
+         background: #f7fdf7;
+         text-align: center;
+         }
+         .features h2 {
+         font-size: 2rem;
+         margin-bottom: 20px;
+         }
+         .features-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+         gap: 30px;
+         margin-top: 40px;
+         }
+         .feature-box {
+         background: #fff;
+         border-radius: 8px;
+         padding: 20px;
+         box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+         }
+         .feature-box h3 {
+         color: #2a672f;
+         margin-bottom: 10px;
+         }
+         .stats {
+         background: #ecf9ee;
+         text-align: center;
+         }
+         .stats h2 {
+         margin-bottom: 30px;
+         }
+         .stats-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 40px;
+         }
+         .stat {
+         font-size: 2rem;
+         font-weight: bold;
+         color: #0a8139;
+         }
+         .stat-label {
+         font-size: 1rem;
+         color: #333;
+         }
+         .trusted-section {
+         background: #2a672f;
+         color: white;
+         text-align: center;
+         }
+         .clients-logos {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 40px;
+         margin-top: 30px;
+         }
+         .clients-logos img {
+         max-height: 30px;
+         filter: brightness(0) invert(1);
+         }
+         .testimonial {
+         background: #f0f5ff;
+         text-align: center;
+         }
+         .testimonial h2 {
+         margin-bottom: 20px;
+         }
+         .quote {
+         font-style: italic;
+         max-width: 700px;
+         margin: 10px auto;
+         color: #333;
+         }
+         .cta-section {
+         background: #0a8139;
+         text-align: center;
+         color: #fff;
+         }
+         footer {
+         text-align: center;
+         font-size: 0.9rem;
+         color: #888;
+         padding: 30px 20px;
+         }
+         a {
+         color: #888;
+         text-decoration: none;
+         }
+         @media (max-width: 768px) {
+         .hero-container {
+         flex-direction: column;
+         text-align: center;
+         }
+         .hero-left {
+         text-align: center;
+         }
+         }
+         @media (max-width: 768px) {
+         .hero-left img[alt="Google Partner Badge"] {
+         height: 50px !important;
+         margin-top: 20px;
+         }
+         }
+      </style>
+      <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   </head>
+   <body>
+      <nav>
+         <div class="logo"><img alt="Logo" src="sf@2x.png"/> Smartfeed</div>
+         <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#stats">Impact</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
+      <header>
+         <div class="hero-container">
+            <div class="hero-left" style="margin-bottom: 40px;">
+               <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; margin-bottom: 30px; display: inline-block; font-size: 1rem; color: #e0f5ea;">
+                  Frustrated with disapprovals or vague Shopping feeds? Smartfeed brings control and clarity.
+               </div>
+               <h1>Fix Your Feed. Elevate Your Shopping Performance.</h1>
+               <p>Smartfeed is the AI-powered tool to clean up disapprovals, keep your data accurate, and scale Shopping campaigns — no guesswork, no delays.</p>
+               <a class="cta-button" href="#contact">Book a Demo</a>
+               <div style="margin-top: 20px;">
+                  <a href="https://www.google.com/partners/agency?id=5536550841" target="_blank">
+                  <img alt="Google Partner Badge" src="https://www.gstatic.com/partners/badge/images/2024/PartnerBadgeClickable.svg" style="height: 70px;"/>
+                  </a>
+               </div>
+            </div>
+            <div class="hero-right">
+               <img alt="Smartfeed Demo" src="https://moonbow.co/images/smartfeed/shop-img1.png" style="margin-bottom: 40px;"/>
+            </div>
+         </div>
+      </header>
+      <section class="trusted-section" data-aos="fade-up">
+         <h2>Trusted by Leading Retailers</h2>
+         <div class="clients-logos">
+            <img alt="Lacoste" src="https://moonbow.co/images/smartfeed/lacoste-white.png"/>
+            <img alt="Smyths" src="https://moonbow.co/images/smartfeed/smyths-white.png"/>
+            <img alt="GroupM" src="https://moonbow.co/images/smartfeed/groupm-white.png"/>
+            <img alt="Havas" src="https://moonbow.co/images/smartfeed/havas-white.png"/>
+            <img alt="Dulux" src="https://moonbow.co/images/smartfeed/dulux-white.png"/>
+            <img alt="Swarovski" src="https://moonbow.co/images/smartfeed/swarovski-white.png"/>
+         </div>
+      </section>
+      <section class="features" data-aos="fade-up" id="features">
+         <h2>Why Retailers Choose Smartfeed</h2>
+         <div class="features-grid">
+            <div class="feature-box">
+               <h3>🤖 AI Classification</h3>
+               <p>Automatically assigns your products to the most relevant categories, improving visibility and ad performance.</p>
+            </div>
+            <div class="feature-box">
+               <h3>🛠️ Feed Optimisation Engine</h3>
+               <p>Smartfeed rewrites and restructures feed attributes using AI to match Google Shopping best practices and improve performance.</p>
+            </div>
+            <div class="feature-box">
+               <h3>🌐 Multi-Channel Ready</h3>
+               <p>Optimised for Google, Meta, and other Shopping networks with real-time syncing and clean data feeds.</p>
+            </div>
+         </div>
+         <div class="features-grid">
+            <div class="feature-box">
+               <h3>🚫 Rejections Fixed</h3>
+               <p>Fix policy issues, formatting errors, and missing fields automatically.</p>
+            </div>
+            <div class="feature-box">
+               <h3>⚠️ Live Feed Alerts</h3>
+               <p>Instant notifications when something breaks, so you're never in the dark with rejected products or broken SKUs.</p>
+            </div>
+            <div class="feature-box">
+               <h3>📈 Better Visibility</h3>
+               <p>More approvals = better Shopping ad rank and cheaper CPCs.</p>
+            </div>
+         </div>
+      </section>
+      <section class="before-after-title" style="background: #f7f9fa; padding: 60px 20px; text-align: center;">
+         <h2>Here’s What Smartfeed Fixes</h2>
+         <p>We turn incomplete or vague titles into fully optimised product listings that perform better in Shopping ads.</p>
+         <div style="display: flex; justify-content: center; align-items: center; gap: 100px; margin-top: 40px; flex-wrap: wrap;">
+            <div style="width: 500px; padding: 20px 30px; background: #f1f1f1; border-radius: 10px;">
+               <h3 style="color: #444;">Before</h3>
+               <p style="font-family: monospace;">"cotton shirt for men"</p>
+            </div>
+            <span style="font-size: 2rem; font-weight: bold; color: #0a8139;">➔</span>
+            <img alt="Smartfeed Logo" src="sf@2x.png" style="height: 40px; vertical-align: middle;"/>
+            <span style="font-size: 2rem; font-weight: bold; color: #0a8139;">➔</span>
+            <div style="width: 500px; padding: 20px 30px; background: #e6fff0; border-radius: 10px;">
+               <h3 style="color: #0a8139;">After</h3>
+               <p style="font-family: monospace;">"Men’s Blue Cotton Shirt – Medium, Tailored Fit (BrandName)"</p>
+            </div>
+         </div>
+         <div style="text-align: center; margin-top: 30px;">
+            <a href="#features" style="background: #0a8139; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 500;">Explore Smartfeed Features</a>
+         </div>
+      </section>
+      <section class="stats data-aos=" id="stats" zoom-in-up"="">
+         <h2>Smartfeed in Numbers</h2>
+         <div class="stats-container">
+            <div>
+               <div class="stat">42.7M+</div>
+               <div class="stat-label">Product &amp; price updates daily</div>
+            </div>
+            <div>
+               <div class="stat">£475M</div>
+               <div class="stat-label">Saved on out-of-stock products</div>
+            </div>
+            <div>
+               <div class="stat">+67%</div>
+               <div class="stat-label">Extra reach for Shopping campaigns</div>
+            </div>
+         </div>
+         <div class="stats-container" style="margin-top: 40px;">
+            <div>
+               <div class="stat">90% ↓</div>
+               <div class="stat-label">Feed Rejections</div>
+            </div>
+            <div>
+               <div class="stat">+47%</div>
+               <div class="stat-label">Shopping Performance</div>
+            </div>
+            <div>
+               <div class="stat">100%</div>
+               <div class="stat-label">Feed Readiness Score</div>
+            </div>
+         </div>
+      </section>
+      <section class="marketing-channels" style="background: #f9f9f9; padding: 60px 20px; text-align: center;">
+         <h2>Smartfeed Powers All Your Marketing Channels</h2>
+         <p>Distribute clean, optimised product data across every platform that matters.</p>
+         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+            <img alt="Google Shopping" src="https://moonbow.co/images/smartfeed/google-logo.png" style="height:40px;" title="Google Shopping"/>
+            <img alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" style="height:40px;" title="Facebook"/>
+            <img alt="AWIN" src="https://moonbow.co/images/smartfeed/awin-logo.png" style="height:40px;" title="AWIN"/>
+            <img alt="Snapchat" src="https://moonbow.co/images/smartfeed/Snapchat.png" style="height:40px;" title="Snapchat"/>
+            <img alt="Pinterest" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" style="height:40px;" title="Pinterest"/>
+            <img alt="Bing" src="https://www.bing.com/rp/QO12R6eZz9WMzJPOio-qN8bXJZ4.png" style="height:40px;" title="Bing"/>
+            <img alt="TikTok" src="https://icon2.cleanpng.com/20200922/xqh/transparent-social-media-1713858561643.webp" style="height:40px;" title="TikTok"/>
+            <img alt="Idealo" src="https://smart-feed.ai/assets/images/channels/Idealo.svg" style="height:40px;" title="Idealo"/>
+         </div>
+      </section>
+      <section class="data-sources" style="padding: 60px 20px; text-align: center;">
+         <h2>Plug into Any Source. No IT Drama.</h2>
+         <p>Whether you’re using a store platform or a spreadsheet — Smartfeed can connect and clean.</p>
+         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+            <img alt="Magento" src="https://icon2.cleanpng.com/20180909/ojo/kisspng-magento-logo-aftership-e-commerce-varnish-outclicks-commercial-analysis-of-up-vision-5b9568897b1549.4588647015365182815042.jpg" style="height:40px;" title="Magento"/>
+            <img alt="Shopify" src="https://icon2.cleanpng.com/20180516/vaw/avr95u89g.webp" style="height:40px;" title="Shopify"/>
+            <img alt="Google Sheets" src="https://icon2.cleanpng.com/lnd/20241121/rv/6b2d983549626954fe5d18708a48fe.webp" style="height:40px;" title="Google Sheets"/>
+            <img alt="XML" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xml.svg" style="height:40px;" title="XML"/>
+            <img alt="BigCommerce" src="https://moonbow.co/images/smartfeed/bigcommerce.png" style="height:40px;" title="BigCommerce"/>
+            <img alt="WooCommerce" src="https://moonbow.co/images/smartfeed/woocommerce.png" style="height:40px;" title="WooCommerce"/>
+            <img alt="PrestaShop" src="https://cdn.freebiesupply.com/logos/large/2x/prestashop-logo-png-transparent.png" style="height:40px;" title="PrestaShop"/>
+         </div>
+      </section>
+      <section class="how-it-works" style="padding: 60px 20px; background: #f0f4ff; text-align: center;">
+         <h2>How It Works</h2>
+         <p style="max-width: 700px; margin: 0 auto 20px;">Smartfeed simplifies complex feed management in 3 simple steps.</p>
+         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+            <div style="flex: 1; min-width: 240px; max-width: 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+               <h3>1. Connect Your Feed</h3>
+               <p>Plug in from any source – Shopify, Magento, XML, or Google Sheets.</p>
+            </div>
+            <div style="flex: 1; min-width: 240px; max-width: 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+               <h3>2. Let Smartfeed Optimise</h3>
+               <p>We automatically clean, enhance, and flag issues in real time.</p>
+            </div>
+            <div style="flex: 1; min-width: 240px; max-width: 280px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+               <h3>3. Go Live with Confidence</h3>
+               <p>Your Shopping campaigns run faster, better, and more accurately.</p>
+            </div>
+         </div>
+      </section>
+      <section class="testimonial-cards" style="padding: 60px 20px; background: #f4f8fc; text-align: center;">
+         <h2>What Our Clients Say</h2>
+         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+            <div style="background: white; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+               <p style="font-style: italic;">“Smartfeed cleaned up our product feed in days. No more errors.”</p>
+               <p style="font-weight: bold;">★★★★★</p>
+               <p style="font-size: 0.9rem; color: #666;">eCommerce Manager, GroupM</p>
+            </div>
+            <div style="background: white; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+               <p style="font-style: italic;">“We saw our feed disapprovals drop by 90% within the first 2 weeks.”</p>
+               <p style="font-weight: bold;">★★★★★</p>
+               <p style="font-size: 0.9rem; color: #666;">Digital Lead, AkzoNobel</p>
+            </div>
+            <div style="background: white; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+               <p style="font-style: italic;">“We saw our feed disapprovals drop by 90% within the first 2 weeks.”</p>
+               <p style="font-weight: bold;">★★★★★</p>
+               <p style="font-size: 0.9rem; color: #666;">Digital Lead, AkzoNobel</p>
+            </div>
+         </div>
+      </section>
+      <section class="case-studies" style="background: #f9f9f9; padding: 60px 20px; text-align: center;">
+         <h2>Real Results from Retailers Like You</h2>
+         <p>Here’s how Smartfeed helped businesses improve Shopping campaign performance and cut down errors — fast.</p>
+         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto;">
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+               <h3><img alt="Childsplay Clothing" src="https://consumersiteimages.trustpilot.net/business-units/4e1e7e6300006400051032e0-198x149-1x.avif"/></h3>
+               <p><strong>Challenge:</strong> Frequent feed rejections and disapprovals<br/>
+                  <strong>Solution:</strong> Smartfeed's cleanup engine and policy mapping<br/>
+                  <strong>Impact:</strong> 90% fewer disapproved products in 14 days
+               </p>
+            </div>
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+               <h3><img alt="Cocoon Sleeping" src="https://s3-eu-west-1.amazonaws.com/tpd/logos/5d12315190807c00012d01d8/0x0.png" style="width: 169px;"/></h3>
+               <p><strong>Challenge:</strong> Poor CTR and low ROAS on Shopping Ads<br/>
+                  <strong>Solution:</strong> Feed re-scoring + dynamic title rewrite<br/>
+                  <strong>Impact:</strong> 47% increase in conversion rate within a month
+               </p>
+            </div>
+         </div>
+      </section>
+      <section class="cta-section" data-aos="fade-up" id="contact">
+         <h2>Ready to Fix Your Feed?</h2>
+         <p>Book a demo and see what’s costing you revenue. Get a tailored walkthrough of how Smartfeed can help your business.</p>
+         <a class="cta-button" href="mailto:hello@moonbow.co">Book a Demo</a>
+      </section>
+      <footer>
+         © 2025 <a href="https://moonbow.co">Moonbow</a>. All rights reserved.
+      </footer>
+      <script>AOS.init({ once: true });</script>
+      <style>
+         .sticky-cta {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         background: #0a8139;
+         color: white;
+         padding: 12px 18px;
+         border-radius: 30px;
+         font-weight: bold;
+         text-decoration: none;
+         z-index: 999;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+         }
+      </style>
+      <a class="sticky-cta" href="#contact">Let’s Fix Your Feed</a>
+   </body>
+</html>
